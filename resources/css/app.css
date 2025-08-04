@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ======== CUSTOM FULLCALENDAR FIX ======== */
+
+/* Ukuran keseluruhan */
+#calendar {
+  max-width: 800px;   /* Biar tidak melebar seluruh layar */
+  margin: 0 auto;     /* Tengah */
+  font-size: 0.8rem;  /* Font lebih kecil */
+}
+
+/* Judul bulan */
+.fc-toolbar-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Tombol navigasi */
+.fc-button {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+}
+
+/* Kotak hari lebih rapat */
+.fc .fc-daygrid-day-frame {
+  padding: 2px;
+}
+
+/* Minggu warna merah */
+.fc-day-sun .fc-daygrid-day-number {
+  color: #DC2626;
+  font-weight: bold;
+}
+
+/* Catatan kecil di bawah angka */
+.fc .fc-daygrid-day-bottom-note {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.55rem;
+  color: #9CA3AF;
+}
+
+/* Kotak tanggal lebih kecil */
+.fc-daygrid-day {
+  height: 80px; /* Atur tinggi kotak hari */
+}
+
+/* Tooltip & modal event click */
+.fc-event {
+  font-size: 0.7rem;
+}
+
+/* Responsive fix biar ga melebar di mobile */
+@media (max-width: 768px) {
+  #calendar {
+    max-width: 100%;
+    font-size: 0.75rem;
+  }
+}
